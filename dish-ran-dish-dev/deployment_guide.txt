@@ -1,0 +1,9 @@
+### Deployment on DISH-DEV => use the deployment instance(ssh at host:3.145.87.73 , ec2-user) to do the deployment
+
+<=== Follow below steps==>
+1. Get the existing image tag 1.0.5 - To get this run with command => oc edit deploy ran-dish-ran
+2. Build the image => docker build -t dishwireless.jfrog.io/docker-dev/ibm/dev/icte/dish-ran:1.0.6 --no-cache .  ## Note here we have updated new image tag which is 1.0.6, earlier it was 1.0.5
+3. Push the image => docker push dishwireless.jfrog.io/docker-dev/ibm/dev/icte/dish-ran:1.0.6
+4. Edit the image details in ran-dish-ran deploy - To edit this run this command again => oc edit deploy ran-dish-ran
+5. Press ESC + i to edit then in down image variable - update newly pushed image which is 1.0.6
+6. Press ESC + wq to save and exit, now to the command => oc get pods # To see the status of the pod runing (will take few minutes to build and up)

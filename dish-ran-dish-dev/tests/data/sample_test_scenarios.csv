@@ -1,0 +1,45 @@
+scenario_name,user_input,expected_response,description
+General,"Hi, what information can you help me with",will show the capabilities,Test basic query
+Automation,i want to change RET value,Ask for site and target tilt value,Test basic RAN Automation query with vendor specification
+Automation,ALALB00001C_2,Ask for Target tilt value,Test basic RAN Automation query with vendor specification
+Automation,target tile value is 5,Will ask for Option,Test basic RAN Automation query with vendor specification
+Automation,go for option 5,ask for proceed or cancel,Test basic RAN Automation query with vendor specification
+Automation,Cancel,will cancel the request,Test basic RAN Automation query with vendor specification
+Class-C,now lets change to class c,switch to Class-C and ask for parameters,Test basic RAN Class-C query with vendor specification
+Class-C,MNMSP00004A sector 3,ask for parameters,Test basic RAN Class-C query with vendor specification
+Class-C,a1 threshold_rsrp value is 5,list the available cells and ask for an option,Test basic RAN Class-C query with vendor specification
+Class-C,choose option 1,list the summary and ask if user wants to continue or cancel,Test basic RAN Class-C query with vendor specification
+Class-C,cancel,cancel the request,Test basic RAN Class-C query with vendor specification
+Config,What is the operational state of CUCP with id 653010000?,enabled,Test basic RAN Config query with vendor specification
+Config,what is the tilt value for cell name SYSYR00286A,List the table for this site tilt values,Test basic RAN Config query with vendor specification
+Memory,what about site ATATL00155A?,List the table for this site tilt values,Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of A3 offset in Samsung GPL,6 (3dB),Test basic RAN Config query with vendor specification
+GPL,What is the DISH recommended value for the parameter Event A3 - Report Interval?,Samsung value is 240ms and mavenir value is MS240,Test basic RAN Config query with vendor specification
+Config,What is the administrative state of CUCP with user label NYNYC351030000?,Not found,Test basic RAN Config query with vendor specification
+QA,How can I configure CA to trigger it faster for samsung?,respond with result,Test basic RAN QA query with vendor specification
+GPL,What is the Dish Recommended value of A3 offset in Mavenir GPL,36 (3 dB),Test basic RAN Config query with vendor specification
+QA,How does the Inter-CU Ho work in Mavenir?,respond with result,Test basic RAN QA query with vendor specification
+Config,what is the dish recommended GPL value preambleReceivedTargetPwr?,-106,Test basic RAN Config query with vendor specification
+Class-C,I want to update a5 threshold2 rsrp for cell name BOBOS01075F_2 to value 52,"show the summary, ask for confirmation",Test basic RAN Class-C query with vendor specification
+Class-C,cancel,,Test basic RAN Class-C query with vendor specification
+GPL,which gNodeB_CU_CP had the max misalignmnets in last week,respond with result,Test basic RAN Config query with vendor specification
+GPL,How many parameters were checked in the most recent audit for the MCA AOI?,respond with result,Test basic RAN Config query with vendor specification
+GPL,can you check for DEN AOI on 07th July,respond with result,Test basic RAN Config query with vendor specification
+GPL,can you check for DAL AOI,respond with result,Test basic RAN Config query with vendor specification
+GPL,What is the dish recommended value of t300 timer in Samsung GPL,1000ms,Test basic RAN Config query with vendor specification
+GPL,WHat band is this antenna model DCWDC00536A_3_n71_F-G,n71,Test basic RAN Config query with vendor specification
+GPL,What is the event type for trigger_quantity for this cell ATATL00068A_3_n66_G,rsrp,Test basic RAN Config query with vendor specification
+GPL,What is the maximum and minimum tilt supported by DCWDC00536A_3_n29_E_DL?,140 and 20,Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of A3 time to trigger in Mavenir GPL,MS640,Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of A3 time to trigger in Samsung GPL,640ms,Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of A3 offset in Samsung GPL,6 (3dB),Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of A3 offset in Mavenir GPL,36 (3 dB),Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of t300 timer in Samsung GPL,1000ms,Test basic RAN Config query with vendor specification
+GPL,What is the Dish Recommended value of A3 offset,Ask for vendor,Test basic RAN Config query with vendor specification
+GPL,Mavenir,36 (3 dB),Test basic RAN Config query with vendor specification
+GPL,"Which CUCP has the most GPL inconsistencies for Mavenir AOI, ""DAL""?",7,Test basic RAN Config query with vendor specification
+GPL,what is the dish recommended value of MaxAnrTimerDuration in mavenir gpl,1440,Test basic RAN Config query with vendor specification
+GPL,Please list all relevant Mavenir MO Types for Parameter: prachCfgIndex,Not Available,Test basic RAN Config query with vendor specification
+GPL,"For the Mavenir GPL Audit, what should the baseline value be for MO Type: DU,gnbvs,gnbDuConfig,gnbCellDuVsConfig,l1-CfgInfo,prachCfg Parameter: prachCfgIndex Policy Condition: $/ancestor:gnbDuConfig/gen:gNodeB_DU.DU_NONSDL_CARRIER_COUNT = 4 and $/ancestor:gnbCellDuVsConfig/gen:NRCell.BANDNO = 'n71' and $/ancestor:gnbCellDuVsConfig/gen:NRCell.CARRIERNO = 'n71-1' and $/ancestor:gnbCellDuVsConfig/gen:NRCell.SDL_SUPPORT = 0",Not Available,Test basic RAN Config query with vendor specification
+GPL,"For the Mavenir GPL Audit, what should the baseline value be for MO Type: CUCP,data,ManagedElement,GNBCUCPFunction,NRCellCU,NRFreqRelation Parameter: qRxLevMin Policy Condition: $/ancestor:NRCellCU/gen:NRCell.BANDNO = 'n70' and $.freqBandIndicatorNR = '70'",Not Available,Test basic RAN Config query with vendor specification
+GPL,from GPL inconsistency report can you give me region wise inconsistency?,will show the table,Test basic RAN Config query with vendor specification

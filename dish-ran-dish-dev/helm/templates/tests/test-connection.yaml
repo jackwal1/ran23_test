@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "noc-ran.fullname" . }}-test-connection"
+  labels:
+    {{- include "noc-ran.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "noc-ran.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

@@ -1,0 +1,62 @@
+pipeline {
+  
+     agent {label 'DockerIO-4'}
+
+
+     options 
+       {  
+         skipDefaultCheckout()
+	      disableConcurrentBuilds()
+          buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '30'))
+       
+	   } 
+	
+	
+	environment {
+     
+       scannerHome = tool 'SonarQube'	
+  
+      } 
+      
+  stages {
+
+     stage ('Prebuild: Clean up workspace') {
+            steps {
+                cleanWs()
+            }
+	    }  
+
+      stage('Checkout') {
+            steps {
+                echo 'Checking out SCM'                
+                step([$class: 'WsCleanup'])
+                checkout scm
+            }
+        }
+	  
+           	      
+stage ('Docker Build') {
+            steps {
+                
+                sh ''' 
+		
+		 pwd
+		 docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ${DOCKER_URL}
+		 docker build  -t ${DOCKER_URL}/${DOCKER_IMAGE}:${DOCKER_TAG} --no-cache .
+		 docker logout
+		 docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ${DOCKER_URL}
+       docker push ${DOCKER_URL}/${DOCKER_IMAGE}:${DOCKER_TAG}	 
+		
+                
+                '''
+             }	    
+      }
+	 stage ('Postbuild: Clean up workspace') {
+            steps {
+                cleanWs()
+            }
+	    }  
+      
+                 
+   }
+}
