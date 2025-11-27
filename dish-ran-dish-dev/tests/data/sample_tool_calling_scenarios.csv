@@ -1,5 +1,0 @@
-scenario,step,user_question,expected_tool_call,tool_params,agent_response,description
-Mavenir RAN Config Context Chain,1,What is the current tilt value for site HOHOU00036B?,NO_TOOL_CALL,,Agent should ask for vendor specification,Test agent asking for vendor when not specified
-Mavenir RAN Config Context Chain,2,Mavenir,fetch_ran_config,vendor: mavenir,Agent should provide tilt value for the site,Test fetch_ran_config tool call with vendor context
-Mavenir RAN Config Context Chain,3,What about the operational state of CUCP with name JKRLA627035000?,NO_TOOL_CALL,,Agent should ask / confirm for the vendor,Test agent is confirming for vendor
-Mavenir RAN Config Context Chain,4,Samsung,fetch_ran_config,vendor: samsung,Agent should provide operational state of the CUCP,Test fetch_ran_config tool call with vendor context

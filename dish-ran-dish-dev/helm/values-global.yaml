@@ -1,7 +1,0 @@
-image:
-  #repository: dishwireless.jfrog.io/docker-dev/ibm/dev/icte/dish-rca
-  #image: dishwireless.jfrog.io/docker-dev/ibm/prod/icte/icte-log-v2
-  repository: dishwireless.jfrog.io/docker-dev/ibm/icte/dish-ran
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: <+trigger.tag>
